@@ -1,0 +1,10 @@
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\bin\Debug\SectorGenerator.exe.config
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\bin\Debug\SectorGenerator.exe
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\bin\Debug\SectorGenerator.pdb
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\obj\Debug\SectorGenerator.csprojAssemblyReference.cache
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\obj\Debug\SectorGenerator.Form1.resources
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\obj\Debug\SectorGenerator.Properties.Resources.resources
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\obj\Debug\SectorGenerator.csproj.GenerateResource.cache
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\obj\Debug\SectorGenerator.csproj.CoreCompileInputs.cache
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\obj\Debug\SectorGenerator.exe
+E:\программирование\vsc\repos\SectorGenerator\SectorGenerator\obj\Debug\SectorGenerator.pdb
