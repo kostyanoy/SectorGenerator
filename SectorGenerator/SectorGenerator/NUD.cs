@@ -9,22 +9,15 @@ namespace SectorGenerator
 {
     static class NUD
     {
+        //сбор данных из NUD'ов
         public static int[] collectNUD(params NumericUpDown[] NUDs)
         {
-            int len = 0;
-            for (int i = 0; i < 9; i++)
+            int[] values = new int[NUDs.Length];
+            for (int i = 0; i < NUDs.Length; i++)
             {
-                if (NUDs[i].Value > 0)
-                    len++;
+                values[i] = Convert.ToInt32(NUDs[i].Value);
             }
-
-            int[] values = new int[len];
-            for (int i = 0; i < 9; i++)
-            {
-                if (NUDs[i].Value > 0)
-                    values[i] = Convert.ToInt32(NUDs[i].Value);
-            }
-
+            //возвращение NUD'ов
             return values;
         }
     }

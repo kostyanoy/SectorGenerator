@@ -30,7 +30,8 @@
         {
             this.TC = new System.Windows.Forms.TabControl();
             this.TPsectorGenerator = new System.Windows.Forms.TabPage();
-            this.LBLresult = new System.Windows.Forms.Label();
+            this.LBLsectorResult = new System.Windows.Forms.Label();
+            this.LBLsectorHint = new System.Windows.Forms.Label();
             this.NUDsectorType9 = new System.Windows.Forms.NumericUpDown();
             this.NUDsectorMaxZones9 = new System.Windows.Forms.NumericUpDown();
             this.NUDsectorMinZones9 = new System.Windows.Forms.NumericUpDown();
@@ -93,38 +94,64 @@
             this.LBLsectorValues = new System.Windows.Forms.Label();
             this.LBLsectorNames = new System.Windows.Forms.Label();
             this.BTNgenerateSector = new System.Windows.Forms.Button();
-            this.ZoneGenerator = new System.Windows.Forms.TabPage();
-            this.LBLzoneGeneratorTypes = new System.Windows.Forms.Label();
-            this.NUDzoneTypes = new System.Windows.Forms.NumericUpDown();
-            this.LBLzoneEnemiesNames = new System.Windows.Forms.Label();
-            this.LBLzoneEmemiesValues = new System.Windows.Forms.Label();
-            this.TBzoneEnemy1 = new System.Windows.Forms.TextBox();
-            this.BTNzoneResult = new System.Windows.Forms.Button();
-            this.LBLzoneResult = new System.Windows.Forms.Label();
-            this.NUDzoneEnemy1 = new System.Windows.Forms.NumericUpDown();
-            this.BTNzoneCounter = new System.Windows.Forms.Button();
-            this.LBLzoneCounter = new System.Windows.Forms.Label();
-            this.NUDzoneEnemy2 = new System.Windows.Forms.NumericUpDown();
-            this.TBzoneEnemy2 = new System.Windows.Forms.TextBox();
-            this.NUDzoneEnemy3 = new System.Windows.Forms.NumericUpDown();
-            this.TBzoneEnemy3 = new System.Windows.Forms.TextBox();
-            this.NUDzoneEnemy4 = new System.Windows.Forms.NumericUpDown();
-            this.TBzoneEnemy4 = new System.Windows.Forms.TextBox();
-            this.NUDzoneEnemy5 = new System.Windows.Forms.NumericUpDown();
-            this.TBzoneEnemy5 = new System.Windows.Forms.TextBox();
-            this.NUDzoneEnemy6 = new System.Windows.Forms.NumericUpDown();
-            this.TBzoneEnemy6 = new System.Windows.Forms.TextBox();
-            this.NUDzoneEnemy7 = new System.Windows.Forms.NumericUpDown();
-            this.TBzoneEnemy7 = new System.Windows.Forms.TextBox();
-            this.NUDzoneEnemy8 = new System.Windows.Forms.NumericUpDown();
-            this.TBzoneEnemy8 = new System.Windows.Forms.TextBox();
-            this.NUDzoneEnemy9 = new System.Windows.Forms.NumericUpDown();
-            this.TBzoneEnemy9 = new System.Windows.Forms.TextBox();
-            this.NUDzoneEnemy10 = new System.Windows.Forms.NumericUpDown();
-            this.TBzoneEnemy10 = new System.Windows.Forms.TextBox();
+            this.CBzoneGenerator = new System.Windows.Forms.TabPage();
+            this.NUDzoneCount = new System.Windows.Forms.NumericUpDown();
+            this.LBLzoneCount = new System.Windows.Forms.Label();
+            this.LBLzoneInfoGenerated = new System.Windows.Forms.Label();
+            this.LBLzonegeneratorSide = new System.Windows.Forms.Label();
             this.CLBzonesSides = new System.Windows.Forms.CheckedListBox();
+            this.NUDbeforeSpawn10 = new System.Windows.Forms.NumericUpDown();
+            this.TBzoneEnemy10 = new System.Windows.Forms.TextBox();
+            this.NUDbeforeSpawn9 = new System.Windows.Forms.NumericUpDown();
+            this.TBzoneEnemy9 = new System.Windows.Forms.TextBox();
+            this.NUDbeforeSpawn8 = new System.Windows.Forms.NumericUpDown();
+            this.TBzoneEnemy8 = new System.Windows.Forms.TextBox();
+            this.NUDbeforeSpawn7 = new System.Windows.Forms.NumericUpDown();
+            this.TBzoneEnemy7 = new System.Windows.Forms.TextBox();
+            this.NUDbeforeSpawn6 = new System.Windows.Forms.NumericUpDown();
+            this.TBzoneEnemy6 = new System.Windows.Forms.TextBox();
+            this.NUDbeforeSpawn5 = new System.Windows.Forms.NumericUpDown();
+            this.TBzoneEnemy5 = new System.Windows.Forms.TextBox();
+            this.NUDbeforeSpawn4 = new System.Windows.Forms.NumericUpDown();
+            this.TBzoneEnemy4 = new System.Windows.Forms.TextBox();
+            this.NUDbeforeSpawn3 = new System.Windows.Forms.NumericUpDown();
+            this.TBzoneEnemy3 = new System.Windows.Forms.TextBox();
+            this.NUDbeforeSpawn2 = new System.Windows.Forms.NumericUpDown();
+            this.TBzoneEnemy2 = new System.Windows.Forms.TextBox();
+            this.LBLzoneCounter = new System.Windows.Forms.Label();
+            this.BTNzoneCounter = new System.Windows.Forms.Button();
+            this.NUDbeforeSpawn1 = new System.Windows.Forms.NumericUpDown();
+            this.LBLzoneInfo = new System.Windows.Forms.Label();
+            this.BTNzoneResult = new System.Windows.Forms.Button();
+            this.TBzoneEnemy1 = new System.Windows.Forms.TextBox();
+            this.LBLzoneBeforeSpawn = new System.Windows.Forms.Label();
+            this.LBLzoneEnemiesNames = new System.Windows.Forms.Label();
+            this.NUDzoneTypes = new System.Windows.Forms.NumericUpDown();
+            this.LBLzoneGeneratorTypes = new System.Windows.Forms.Label();
+            this.TPbuildingGenerator = new System.Windows.Forms.TabPage();
+            this.TPsectorInfo = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.LBLinfoZoneInfo = new System.Windows.Forms.Label();
+            this.LBLinfoZone = new System.Windows.Forms.Label();
+            this.LBLinfoSectorInfo = new System.Windows.Forms.Label();
+            this.LBLinfoSector = new System.Windows.Forms.Label();
+            this.NUDafterSpawn10 = new System.Windows.Forms.NumericUpDown();
+            this.NUDafterSpawn9 = new System.Windows.Forms.NumericUpDown();
+            this.NUDafterSpawn8 = new System.Windows.Forms.NumericUpDown();
+            this.NUDafterSpawn7 = new System.Windows.Forms.NumericUpDown();
+            this.NUDafterSpawn6 = new System.Windows.Forms.NumericUpDown();
+            this.NUDafterSpawn5 = new System.Windows.Forms.NumericUpDown();
+            this.NUDafterSpawn4 = new System.Windows.Forms.NumericUpDown();
+            this.NUDafterSpawn3 = new System.Windows.Forms.NumericUpDown();
+            this.NUDafterSpawn2 = new System.Windows.Forms.NumericUpDown();
+            this.NUDafterSpawn1 = new System.Windows.Forms.NumericUpDown();
+            this.NUDstartChance = new System.Windows.Forms.NumericUpDown();
+            this.LBLstartChance = new System.Windows.Forms.Label();
+            this.BTNreshuffle = new System.Windows.Forms.Button();
+            this.LBLafterSpawn = new System.Windows.Forms.Label();
+            this.CBzoneCycled = new System.Windows.Forms.CheckBox();
+            this.CBzoneInterrupt = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.LBLzoneEnemies = new System.Windows.Forms.Label();
             this.TC.SuspendLayout();
             this.TPsectorGenerator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDsectorType9)).BeginInit();
@@ -163,34 +190,50 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUDsectorName3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDsectorName2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDsectorName1)).BeginInit();
-            this.ZoneGenerator.SuspendLayout();
+            this.CBzoneGenerator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDzoneTypes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy10)).BeginInit();
+            this.TPsectorInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDstartChance)).BeginInit();
             this.SuspendLayout();
             // 
             // TC
             // 
             this.TC.Controls.Add(this.TPsectorGenerator);
-            this.TC.Controls.Add(this.ZoneGenerator);
+            this.TC.Controls.Add(this.CBzoneGenerator);
+            this.TC.Controls.Add(this.TPbuildingGenerator);
+            this.TC.Controls.Add(this.TPsectorInfo);
             this.TC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TC.Location = new System.Drawing.Point(0, 0);
             this.TC.Name = "TC";
             this.TC.SelectedIndex = 0;
-            this.TC.Size = new System.Drawing.Size(767, 365);
+            this.TC.Size = new System.Drawing.Size(871, 413);
             this.TC.TabIndex = 0;
             // 
             // TPsectorGenerator
             // 
-            this.TPsectorGenerator.Controls.Add(this.LBLresult);
+            this.TPsectorGenerator.Controls.Add(this.LBLsectorResult);
+            this.TPsectorGenerator.Controls.Add(this.LBLsectorHint);
             this.TPsectorGenerator.Controls.Add(this.NUDsectorType9);
             this.TPsectorGenerator.Controls.Add(this.NUDsectorMaxZones9);
             this.TPsectorGenerator.Controls.Add(this.NUDsectorMinZones9);
@@ -256,19 +299,27 @@
             this.TPsectorGenerator.Location = new System.Drawing.Point(4, 22);
             this.TPsectorGenerator.Name = "TPsectorGenerator";
             this.TPsectorGenerator.Padding = new System.Windows.Forms.Padding(3);
-            this.TPsectorGenerator.Size = new System.Drawing.Size(759, 339);
+            this.TPsectorGenerator.Size = new System.Drawing.Size(863, 387);
             this.TPsectorGenerator.TabIndex = 0;
             this.TPsectorGenerator.Text = "Генератор Сектора";
             this.TPsectorGenerator.UseVisualStyleBackColor = true;
             // 
-            // LBLresult
+            // LBLsectorResult
             // 
-            this.LBLresult.AutoSize = true;
-            this.LBLresult.Location = new System.Drawing.Point(308, 313);
-            this.LBLresult.Name = "LBLresult";
-            this.LBLresult.Size = new System.Drawing.Size(59, 13);
-            this.LBLresult.TabIndex = 62;
-            this.LBLresult.Text = "Результат";
+            this.LBLsectorResult.AutoSize = true;
+            this.LBLsectorResult.Location = new System.Drawing.Point(523, 318);
+            this.LBLsectorResult.Name = "LBLsectorResult";
+            this.LBLsectorResult.Size = new System.Drawing.Size(0, 13);
+            this.LBLsectorResult.TabIndex = 63;
+            // 
+            // LBLsectorHint
+            // 
+            this.LBLsectorHint.AutoSize = true;
+            this.LBLsectorHint.Location = new System.Drawing.Point(251, 308);
+            this.LBLsectorHint.Name = "LBLsectorHint";
+            this.LBLsectorHint.Size = new System.Drawing.Size(219, 26);
+            this.LBLsectorHint.TabIndex = 62;
+            this.LBLsectorHint.Text = "Выставьте желаемые настройки и \r\nнажмите кнопку \"Сгенерировать Сектор\"";
             // 
             // NUDsectorType9
             // 
@@ -1015,277 +1066,98 @@
             this.BTNgenerateSector.UseVisualStyleBackColor = true;
             this.BTNgenerateSector.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ZoneGenerator
+            // CBzoneGenerator
             // 
-            this.ZoneGenerator.Controls.Add(this.LBLzoneEnemies);
-            this.ZoneGenerator.Controls.Add(this.label1);
-            this.ZoneGenerator.Controls.Add(this.CLBzonesSides);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy10);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy10);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy9);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy9);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy8);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy8);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy7);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy7);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy6);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy6);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy5);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy5);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy4);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy4);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy3);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy3);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy2);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy2);
-            this.ZoneGenerator.Controls.Add(this.LBLzoneCounter);
-            this.ZoneGenerator.Controls.Add(this.BTNzoneCounter);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneEnemy1);
-            this.ZoneGenerator.Controls.Add(this.LBLzoneResult);
-            this.ZoneGenerator.Controls.Add(this.BTNzoneResult);
-            this.ZoneGenerator.Controls.Add(this.TBzoneEnemy1);
-            this.ZoneGenerator.Controls.Add(this.LBLzoneEmemiesValues);
-            this.ZoneGenerator.Controls.Add(this.LBLzoneEnemiesNames);
-            this.ZoneGenerator.Controls.Add(this.NUDzoneTypes);
-            this.ZoneGenerator.Controls.Add(this.LBLzoneGeneratorTypes);
-            this.ZoneGenerator.Location = new System.Drawing.Point(4, 22);
-            this.ZoneGenerator.Name = "ZoneGenerator";
-            this.ZoneGenerator.Padding = new System.Windows.Forms.Padding(3);
-            this.ZoneGenerator.Size = new System.Drawing.Size(759, 339);
-            this.ZoneGenerator.TabIndex = 1;
-            this.ZoneGenerator.Text = "Генератор Зоны";
-            this.ZoneGenerator.UseVisualStyleBackColor = true;
+            this.CBzoneGenerator.Controls.Add(this.label1);
+            this.CBzoneGenerator.Controls.Add(this.CBzoneInterrupt);
+            this.CBzoneGenerator.Controls.Add(this.CBzoneCycled);
+            this.CBzoneGenerator.Controls.Add(this.LBLafterSpawn);
+            this.CBzoneGenerator.Controls.Add(this.BTNreshuffle);
+            this.CBzoneGenerator.Controls.Add(this.LBLstartChance);
+            this.CBzoneGenerator.Controls.Add(this.NUDstartChance);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn10);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn9);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn8);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn7);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn6);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn5);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn4);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn3);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn2);
+            this.CBzoneGenerator.Controls.Add(this.NUDafterSpawn1);
+            this.CBzoneGenerator.Controls.Add(this.NUDzoneCount);
+            this.CBzoneGenerator.Controls.Add(this.LBLzoneCount);
+            this.CBzoneGenerator.Controls.Add(this.LBLzoneInfoGenerated);
+            this.CBzoneGenerator.Controls.Add(this.LBLzonegeneratorSide);
+            this.CBzoneGenerator.Controls.Add(this.CLBzonesSides);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn10);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy10);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn9);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy9);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn8);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy8);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn7);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy7);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn6);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy6);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn5);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy5);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn4);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy4);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn3);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy3);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn2);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy2);
+            this.CBzoneGenerator.Controls.Add(this.LBLzoneCounter);
+            this.CBzoneGenerator.Controls.Add(this.BTNzoneCounter);
+            this.CBzoneGenerator.Controls.Add(this.NUDbeforeSpawn1);
+            this.CBzoneGenerator.Controls.Add(this.LBLzoneInfo);
+            this.CBzoneGenerator.Controls.Add(this.BTNzoneResult);
+            this.CBzoneGenerator.Controls.Add(this.TBzoneEnemy1);
+            this.CBzoneGenerator.Controls.Add(this.LBLzoneBeforeSpawn);
+            this.CBzoneGenerator.Controls.Add(this.LBLzoneEnemiesNames);
+            this.CBzoneGenerator.Controls.Add(this.NUDzoneTypes);
+            this.CBzoneGenerator.Controls.Add(this.LBLzoneGeneratorTypes);
+            this.CBzoneGenerator.Location = new System.Drawing.Point(4, 22);
+            this.CBzoneGenerator.Name = "CBzoneGenerator";
+            this.CBzoneGenerator.Padding = new System.Windows.Forms.Padding(3);
+            this.CBzoneGenerator.Size = new System.Drawing.Size(863, 387);
+            this.CBzoneGenerator.TabIndex = 1;
+            this.CBzoneGenerator.Text = "Генератор Зоны";
+            this.CBzoneGenerator.UseVisualStyleBackColor = true;
             // 
-            // LBLzoneGeneratorTypes
+            // NUDzoneCount
             // 
-            this.LBLzoneGeneratorTypes.AutoSize = true;
-            this.LBLzoneGeneratorTypes.Location = new System.Drawing.Point(38, 21);
-            this.LBLzoneGeneratorTypes.Name = "LBLzoneGeneratorTypes";
-            this.LBLzoneGeneratorTypes.Size = new System.Drawing.Size(119, 13);
-            this.LBLzoneGeneratorTypes.TabIndex = 1;
-            this.LBLzoneGeneratorTypes.Text = "Количество шаблонов";
+            this.NUDzoneCount.Location = new System.Drawing.Point(35, 49);
+            this.NUDzoneCount.Name = "NUDzoneCount";
+            this.NUDzoneCount.Size = new System.Drawing.Size(128, 20);
+            this.NUDzoneCount.TabIndex = 33;
             // 
-            // NUDzoneTypes
+            // LBLzoneCount
             // 
-            this.NUDzoneTypes.Location = new System.Drawing.Point(41, 51);
-            this.NUDzoneTypes.Name = "NUDzoneTypes";
-            this.NUDzoneTypes.Size = new System.Drawing.Size(116, 20);
-            this.NUDzoneTypes.TabIndex = 2;
-            this.NUDzoneTypes.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
+            this.LBLzoneCount.AutoSize = true;
+            this.LBLzoneCount.Location = new System.Drawing.Point(32, 19);
+            this.LBLzoneCount.Name = "LBLzoneCount";
+            this.LBLzoneCount.Size = new System.Drawing.Size(131, 13);
+            this.LBLzoneCount.TabIndex = 32;
+            this.LBLzoneCount.Text = "Введите количество зон";
             // 
-            // LBLzoneEnemiesNames
+            // LBLzoneInfoGenerated
             // 
-            this.LBLzoneEnemiesNames.AutoSize = true;
-            this.LBLzoneEnemiesNames.Location = new System.Drawing.Point(394, 19);
-            this.LBLzoneEnemiesNames.Name = "LBLzoneEnemiesNames";
-            this.LBLzoneEnemiesNames.Size = new System.Drawing.Size(95, 13);
-            this.LBLzoneEnemiesNames.TabIndex = 3;
-            this.LBLzoneEnemiesNames.Text = "Названия врагов";
+            this.LBLzoneInfoGenerated.AutoSize = true;
+            this.LBLzoneInfoGenerated.Location = new System.Drawing.Point(173, 353);
+            this.LBLzoneInfoGenerated.Name = "LBLzoneInfoGenerated";
+            this.LBLzoneInfoGenerated.Size = new System.Drawing.Size(0, 13);
+            this.LBLzoneInfoGenerated.TabIndex = 31;
             // 
-            // LBLzoneEmemiesValues
+            // LBLzonegeneratorSide
             // 
-            this.LBLzoneEmemiesValues.AutoSize = true;
-            this.LBLzoneEmemiesValues.Location = new System.Drawing.Point(578, 21);
-            this.LBLzoneEmemiesValues.Name = "LBLzoneEmemiesValues";
-            this.LBLzoneEmemiesValues.Size = new System.Drawing.Size(105, 13);
-            this.LBLzoneEmemiesValues.TabIndex = 4;
-            this.LBLzoneEmemiesValues.Text = "Шанс появления(%)";
-            // 
-            // TBzoneEnemy1
-            // 
-            this.TBzoneEnemy1.Location = new System.Drawing.Point(397, 49);
-            this.TBzoneEnemy1.Name = "TBzoneEnemy1";
-            this.TBzoneEnemy1.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy1.TabIndex = 5;
-            this.TBzoneEnemy1.Text = "Крыса";
-            // 
-            // BTNzoneResult
-            // 
-            this.BTNzoneResult.Location = new System.Drawing.Point(19, 308);
-            this.BTNzoneResult.Name = "BTNzoneResult";
-            this.BTNzoneResult.Size = new System.Drawing.Size(111, 23);
-            this.BTNzoneResult.TabIndex = 6;
-            this.BTNzoneResult.Text = "Сгенерировать";
-            this.BTNzoneResult.UseVisualStyleBackColor = true;
-            this.BTNzoneResult.Click += new System.EventHandler(this.BTNzoneResult_Click);
-            // 
-            // LBLzoneResult
-            // 
-            this.LBLzoneResult.AutoSize = true;
-            this.LBLzoneResult.Location = new System.Drawing.Point(16, 187);
-            this.LBLzoneResult.Name = "LBLzoneResult";
-            this.LBLzoneResult.Size = new System.Drawing.Size(59, 13);
-            this.LBLzoneResult.TabIndex = 7;
-            this.LBLzoneResult.Text = "Результат";
-            // 
-            // NUDzoneEnemy1
-            // 
-            this.NUDzoneEnemy1.Location = new System.Drawing.Point(581, 50);
-            this.NUDzoneEnemy1.Name = "NUDzoneEnemy1";
-            this.NUDzoneEnemy1.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy1.TabIndex = 8;
-            this.NUDzoneEnemy1.Value = new decimal(new int[] {
-            80,
-            0,
-            0,
-            0});
-            // 
-            // BTNzoneCounter
-            // 
-            this.BTNzoneCounter.Location = new System.Drawing.Point(19, 155);
-            this.BTNzoneCounter.Name = "BTNzoneCounter";
-            this.BTNzoneCounter.Size = new System.Drawing.Size(159, 23);
-            this.BTNzoneCounter.TabIndex = 9;
-            this.BTNzoneCounter.Text = "Нажимать, если скучно";
-            this.BTNzoneCounter.UseVisualStyleBackColor = true;
-            this.BTNzoneCounter.Click += new System.EventHandler(this.BTNzoneCounter_Click);
-            // 
-            // LBLzoneCounter
-            // 
-            this.LBLzoneCounter.AutoSize = true;
-            this.LBLzoneCounter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LBLzoneCounter.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LBLzoneCounter.Location = new System.Drawing.Point(72, 82);
-            this.LBLzoneCounter.Name = "LBLzoneCounter";
-            this.LBLzoneCounter.Size = new System.Drawing.Size(45, 51);
-            this.LBLzoneCounter.TabIndex = 10;
-            this.LBLzoneCounter.Text = "0";
-            // 
-            // NUDzoneEnemy2
-            // 
-            this.NUDzoneEnemy2.Location = new System.Drawing.Point(581, 76);
-            this.NUDzoneEnemy2.Name = "NUDzoneEnemy2";
-            this.NUDzoneEnemy2.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy2.TabIndex = 12;
-            this.NUDzoneEnemy2.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // TBzoneEnemy2
-            // 
-            this.TBzoneEnemy2.Location = new System.Drawing.Point(397, 75);
-            this.TBzoneEnemy2.Name = "TBzoneEnemy2";
-            this.TBzoneEnemy2.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy2.TabIndex = 11;
-            this.TBzoneEnemy2.Text = "Безумец";
-            // 
-            // NUDzoneEnemy3
-            // 
-            this.NUDzoneEnemy3.Location = new System.Drawing.Point(581, 102);
-            this.NUDzoneEnemy3.Name = "NUDzoneEnemy3";
-            this.NUDzoneEnemy3.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy3.TabIndex = 14;
-            // 
-            // TBzoneEnemy3
-            // 
-            this.TBzoneEnemy3.Location = new System.Drawing.Point(397, 101);
-            this.TBzoneEnemy3.Name = "TBzoneEnemy3";
-            this.TBzoneEnemy3.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy3.TabIndex = 13;
-            // 
-            // NUDzoneEnemy4
-            // 
-            this.NUDzoneEnemy4.Location = new System.Drawing.Point(581, 128);
-            this.NUDzoneEnemy4.Name = "NUDzoneEnemy4";
-            this.NUDzoneEnemy4.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy4.TabIndex = 16;
-            // 
-            // TBzoneEnemy4
-            // 
-            this.TBzoneEnemy4.Location = new System.Drawing.Point(397, 127);
-            this.TBzoneEnemy4.Name = "TBzoneEnemy4";
-            this.TBzoneEnemy4.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy4.TabIndex = 15;
-            // 
-            // NUDzoneEnemy5
-            // 
-            this.NUDzoneEnemy5.Location = new System.Drawing.Point(581, 154);
-            this.NUDzoneEnemy5.Name = "NUDzoneEnemy5";
-            this.NUDzoneEnemy5.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy5.TabIndex = 18;
-            // 
-            // TBzoneEnemy5
-            // 
-            this.TBzoneEnemy5.Location = new System.Drawing.Point(397, 153);
-            this.TBzoneEnemy5.Name = "TBzoneEnemy5";
-            this.TBzoneEnemy5.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy5.TabIndex = 17;
-            // 
-            // NUDzoneEnemy6
-            // 
-            this.NUDzoneEnemy6.Location = new System.Drawing.Point(581, 180);
-            this.NUDzoneEnemy6.Name = "NUDzoneEnemy6";
-            this.NUDzoneEnemy6.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy6.TabIndex = 20;
-            // 
-            // TBzoneEnemy6
-            // 
-            this.TBzoneEnemy6.Location = new System.Drawing.Point(397, 179);
-            this.TBzoneEnemy6.Name = "TBzoneEnemy6";
-            this.TBzoneEnemy6.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy6.TabIndex = 19;
-            // 
-            // NUDzoneEnemy7
-            // 
-            this.NUDzoneEnemy7.Location = new System.Drawing.Point(581, 206);
-            this.NUDzoneEnemy7.Name = "NUDzoneEnemy7";
-            this.NUDzoneEnemy7.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy7.TabIndex = 22;
-            // 
-            // TBzoneEnemy7
-            // 
-            this.TBzoneEnemy7.Location = new System.Drawing.Point(397, 205);
-            this.TBzoneEnemy7.Name = "TBzoneEnemy7";
-            this.TBzoneEnemy7.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy7.TabIndex = 21;
-            // 
-            // NUDzoneEnemy8
-            // 
-            this.NUDzoneEnemy8.Location = new System.Drawing.Point(581, 232);
-            this.NUDzoneEnemy8.Name = "NUDzoneEnemy8";
-            this.NUDzoneEnemy8.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy8.TabIndex = 24;
-            // 
-            // TBzoneEnemy8
-            // 
-            this.TBzoneEnemy8.Location = new System.Drawing.Point(397, 231);
-            this.TBzoneEnemy8.Name = "TBzoneEnemy8";
-            this.TBzoneEnemy8.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy8.TabIndex = 23;
-            // 
-            // NUDzoneEnemy9
-            // 
-            this.NUDzoneEnemy9.Location = new System.Drawing.Point(581, 258);
-            this.NUDzoneEnemy9.Name = "NUDzoneEnemy9";
-            this.NUDzoneEnemy9.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy9.TabIndex = 26;
-            // 
-            // TBzoneEnemy9
-            // 
-            this.TBzoneEnemy9.Location = new System.Drawing.Point(397, 257);
-            this.TBzoneEnemy9.Name = "TBzoneEnemy9";
-            this.TBzoneEnemy9.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy9.TabIndex = 25;
-            // 
-            // NUDzoneEnemy10
-            // 
-            this.NUDzoneEnemy10.Location = new System.Drawing.Point(581, 284);
-            this.NUDzoneEnemy10.Name = "NUDzoneEnemy10";
-            this.NUDzoneEnemy10.Size = new System.Drawing.Size(102, 20);
-            this.NUDzoneEnemy10.TabIndex = 28;
-            // 
-            // TBzoneEnemy10
-            // 
-            this.TBzoneEnemy10.Location = new System.Drawing.Point(397, 283);
-            this.TBzoneEnemy10.Name = "TBzoneEnemy10";
-            this.TBzoneEnemy10.Size = new System.Drawing.Size(167, 20);
-            this.TBzoneEnemy10.TabIndex = 27;
+            this.LBLzonegeneratorSide.AutoSize = true;
+            this.LBLzonegeneratorSide.Location = new System.Drawing.Point(177, 97);
+            this.LBLzonegeneratorSide.Name = "LBLzonegeneratorSide";
+            this.LBLzonegeneratorSide.Size = new System.Drawing.Size(170, 13);
+            this.LBLzonegeneratorSide.TabIndex = 30;
+            this.LBLzonegeneratorSide.Text = "\"Перед\" может быть направлен";
             // 
             // CLBzonesSides
             // 
@@ -1296,37 +1168,572 @@
             "Запад",
             "Север",
             "Юг"});
-            this.CLBzonesSides.Location = new System.Drawing.Point(186, 51);
+            this.CLBzonesSides.Location = new System.Drawing.Point(180, 127);
             this.CLBzonesSides.Name = "CLBzonesSides";
             this.CLBzonesSides.Size = new System.Drawing.Size(167, 94);
             this.CLBzonesSides.Sorted = true;
             this.CLBzonesSides.TabIndex = 29;
             // 
+            // NUDbeforeSpawn10
+            // 
+            this.NUDbeforeSpawn10.Location = new System.Drawing.Point(540, 284);
+            this.NUDbeforeSpawn10.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn10.Name = "NUDbeforeSpawn10";
+            this.NUDbeforeSpawn10.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn10.TabIndex = 28;
+            // 
+            // TBzoneEnemy10
+            // 
+            this.TBzoneEnemy10.Location = new System.Drawing.Point(397, 283);
+            this.TBzoneEnemy10.Name = "TBzoneEnemy10";
+            this.TBzoneEnemy10.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy10.TabIndex = 27;
+            // 
+            // NUDbeforeSpawn9
+            // 
+            this.NUDbeforeSpawn9.Location = new System.Drawing.Point(540, 258);
+            this.NUDbeforeSpawn9.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn9.Name = "NUDbeforeSpawn9";
+            this.NUDbeforeSpawn9.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn9.TabIndex = 26;
+            // 
+            // TBzoneEnemy9
+            // 
+            this.TBzoneEnemy9.Location = new System.Drawing.Point(397, 257);
+            this.TBzoneEnemy9.Name = "TBzoneEnemy9";
+            this.TBzoneEnemy9.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy9.TabIndex = 25;
+            // 
+            // NUDbeforeSpawn8
+            // 
+            this.NUDbeforeSpawn8.Location = new System.Drawing.Point(540, 232);
+            this.NUDbeforeSpawn8.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn8.Name = "NUDbeforeSpawn8";
+            this.NUDbeforeSpawn8.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn8.TabIndex = 24;
+            // 
+            // TBzoneEnemy8
+            // 
+            this.TBzoneEnemy8.Location = new System.Drawing.Point(397, 231);
+            this.TBzoneEnemy8.Name = "TBzoneEnemy8";
+            this.TBzoneEnemy8.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy8.TabIndex = 23;
+            // 
+            // NUDbeforeSpawn7
+            // 
+            this.NUDbeforeSpawn7.Location = new System.Drawing.Point(540, 206);
+            this.NUDbeforeSpawn7.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn7.Name = "NUDbeforeSpawn7";
+            this.NUDbeforeSpawn7.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn7.TabIndex = 22;
+            // 
+            // TBzoneEnemy7
+            // 
+            this.TBzoneEnemy7.Location = new System.Drawing.Point(397, 205);
+            this.TBzoneEnemy7.Name = "TBzoneEnemy7";
+            this.TBzoneEnemy7.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy7.TabIndex = 21;
+            // 
+            // NUDbeforeSpawn6
+            // 
+            this.NUDbeforeSpawn6.Location = new System.Drawing.Point(540, 180);
+            this.NUDbeforeSpawn6.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn6.Name = "NUDbeforeSpawn6";
+            this.NUDbeforeSpawn6.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn6.TabIndex = 20;
+            // 
+            // TBzoneEnemy6
+            // 
+            this.TBzoneEnemy6.Location = new System.Drawing.Point(397, 179);
+            this.TBzoneEnemy6.Name = "TBzoneEnemy6";
+            this.TBzoneEnemy6.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy6.TabIndex = 19;
+            // 
+            // NUDbeforeSpawn5
+            // 
+            this.NUDbeforeSpawn5.Location = new System.Drawing.Point(540, 154);
+            this.NUDbeforeSpawn5.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn5.Name = "NUDbeforeSpawn5";
+            this.NUDbeforeSpawn5.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn5.TabIndex = 18;
+            // 
+            // TBzoneEnemy5
+            // 
+            this.TBzoneEnemy5.Location = new System.Drawing.Point(397, 153);
+            this.TBzoneEnemy5.Name = "TBzoneEnemy5";
+            this.TBzoneEnemy5.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy5.TabIndex = 17;
+            // 
+            // NUDbeforeSpawn4
+            // 
+            this.NUDbeforeSpawn4.Location = new System.Drawing.Point(540, 128);
+            this.NUDbeforeSpawn4.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn4.Name = "NUDbeforeSpawn4";
+            this.NUDbeforeSpawn4.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn4.TabIndex = 16;
+            // 
+            // TBzoneEnemy4
+            // 
+            this.TBzoneEnemy4.Location = new System.Drawing.Point(397, 127);
+            this.TBzoneEnemy4.Name = "TBzoneEnemy4";
+            this.TBzoneEnemy4.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy4.TabIndex = 15;
+            // 
+            // NUDbeforeSpawn3
+            // 
+            this.NUDbeforeSpawn3.Location = new System.Drawing.Point(540, 102);
+            this.NUDbeforeSpawn3.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn3.Name = "NUDbeforeSpawn3";
+            this.NUDbeforeSpawn3.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn3.TabIndex = 14;
+            // 
+            // TBzoneEnemy3
+            // 
+            this.TBzoneEnemy3.Location = new System.Drawing.Point(397, 101);
+            this.TBzoneEnemy3.Name = "TBzoneEnemy3";
+            this.TBzoneEnemy3.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy3.TabIndex = 13;
+            // 
+            // NUDbeforeSpawn2
+            // 
+            this.NUDbeforeSpawn2.Location = new System.Drawing.Point(540, 76);
+            this.NUDbeforeSpawn2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn2.Name = "NUDbeforeSpawn2";
+            this.NUDbeforeSpawn2.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn2.TabIndex = 12;
+            this.NUDbeforeSpawn2.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            // 
+            // TBzoneEnemy2
+            // 
+            this.TBzoneEnemy2.Location = new System.Drawing.Point(397, 75);
+            this.TBzoneEnemy2.Name = "TBzoneEnemy2";
+            this.TBzoneEnemy2.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy2.TabIndex = 11;
+            this.TBzoneEnemy2.Text = "Безумец";
+            // 
+            // LBLzoneCounter
+            // 
+            this.LBLzoneCounter.AutoSize = true;
+            this.LBLzoneCounter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBLzoneCounter.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LBLzoneCounter.Location = new System.Drawing.Point(66, 158);
+            this.LBLzoneCounter.Name = "LBLzoneCounter";
+            this.LBLzoneCounter.Size = new System.Drawing.Size(45, 51);
+            this.LBLzoneCounter.TabIndex = 10;
+            this.LBLzoneCounter.Text = "0";
+            // 
+            // BTNzoneCounter
+            // 
+            this.BTNzoneCounter.Location = new System.Drawing.Point(13, 231);
+            this.BTNzoneCounter.Name = "BTNzoneCounter";
+            this.BTNzoneCounter.Size = new System.Drawing.Size(159, 23);
+            this.BTNzoneCounter.TabIndex = 9;
+            this.BTNzoneCounter.Text = "Нажимать, если скучно";
+            this.BTNzoneCounter.UseVisualStyleBackColor = true;
+            this.BTNzoneCounter.Click += new System.EventHandler(this.BTNzoneCounter_Click);
+            // 
+            // NUDbeforeSpawn1
+            // 
+            this.NUDbeforeSpawn1.Location = new System.Drawing.Point(540, 50);
+            this.NUDbeforeSpawn1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDbeforeSpawn1.Name = "NUDbeforeSpawn1";
+            this.NUDbeforeSpawn1.Size = new System.Drawing.Size(102, 20);
+            this.NUDbeforeSpawn1.TabIndex = 8;
+            // 
+            // LBLzoneInfo
+            // 
+            this.LBLzoneInfo.AutoSize = true;
+            this.LBLzoneInfo.Location = new System.Drawing.Point(10, 277);
+            this.LBLzoneInfo.Name = "LBLzoneInfo";
+            this.LBLzoneInfo.Size = new System.Drawing.Size(210, 26);
+            this.LBLzoneInfo.TabIndex = 7;
+            this.LBLzoneInfo.Text = "Выставьте желаемые настройки и \r\nнажмите кнопку \"Сгенерировать Зоны\"";
+            // 
+            // BTNzoneResult
+            // 
+            this.BTNzoneResult.Location = new System.Drawing.Point(35, 348);
+            this.BTNzoneResult.Name = "BTNzoneResult";
+            this.BTNzoneResult.Size = new System.Drawing.Size(111, 23);
+            this.BTNzoneResult.TabIndex = 6;
+            this.BTNzoneResult.Text = "Сгенерировать";
+            this.BTNzoneResult.UseVisualStyleBackColor = true;
+            this.BTNzoneResult.Click += new System.EventHandler(this.BTNzoneResult_Click);
+            // 
+            // TBzoneEnemy1
+            // 
+            this.TBzoneEnemy1.Location = new System.Drawing.Point(397, 49);
+            this.TBzoneEnemy1.Name = "TBzoneEnemy1";
+            this.TBzoneEnemy1.Size = new System.Drawing.Size(109, 20);
+            this.TBzoneEnemy1.TabIndex = 5;
+            this.TBzoneEnemy1.Text = "Крыса";
+            // 
+            // LBLzoneBeforeSpawn
+            // 
+            this.LBLzoneBeforeSpawn.AutoSize = true;
+            this.LBLzoneBeforeSpawn.Location = new System.Drawing.Point(522, 19);
+            this.LBLzoneBeforeSpawn.Name = "LBLzoneBeforeSpawn";
+            this.LBLzoneBeforeSpawn.Size = new System.Drawing.Size(145, 13);
+            this.LBLzoneBeforeSpawn.TabIndex = 4;
+            this.LBLzoneBeforeSpawn.Text = "Уменьшение до появления";
+            // 
+            // LBLzoneEnemiesNames
+            // 
+            this.LBLzoneEnemiesNames.AutoSize = true;
+            this.LBLzoneEnemiesNames.Location = new System.Drawing.Point(394, 19);
+            this.LBLzoneEnemiesNames.Name = "LBLzoneEnemiesNames";
+            this.LBLzoneEnemiesNames.Size = new System.Drawing.Size(95, 13);
+            this.LBLzoneEnemiesNames.TabIndex = 3;
+            this.LBLzoneEnemiesNames.Text = "Названия врагов";
+            // 
+            // NUDzoneTypes
+            // 
+            this.NUDzoneTypes.Location = new System.Drawing.Point(35, 127);
+            this.NUDzoneTypes.Name = "NUDzoneTypes";
+            this.NUDzoneTypes.Size = new System.Drawing.Size(116, 20);
+            this.NUDzoneTypes.TabIndex = 2;
+            this.NUDzoneTypes.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // LBLzoneGeneratorTypes
+            // 
+            this.LBLzoneGeneratorTypes.AutoSize = true;
+            this.LBLzoneGeneratorTypes.Location = new System.Drawing.Point(32, 97);
+            this.LBLzoneGeneratorTypes.Name = "LBLzoneGeneratorTypes";
+            this.LBLzoneGeneratorTypes.Size = new System.Drawing.Size(119, 13);
+            this.LBLzoneGeneratorTypes.TabIndex = 1;
+            this.LBLzoneGeneratorTypes.Text = "Количество шаблонов";
+            // 
+            // TPbuildingGenerator
+            // 
+            this.TPbuildingGenerator.Location = new System.Drawing.Point(4, 22);
+            this.TPbuildingGenerator.Name = "TPbuildingGenerator";
+            this.TPbuildingGenerator.Padding = new System.Windows.Forms.Padding(3);
+            this.TPbuildingGenerator.Size = new System.Drawing.Size(863, 387);
+            this.TPbuildingGenerator.TabIndex = 2;
+            this.TPbuildingGenerator.Text = "Генератор Здания";
+            this.TPbuildingGenerator.UseVisualStyleBackColor = true;
+            // 
+            // TPsectorInfo
+            // 
+            this.TPsectorInfo.Controls.Add(this.comboBox1);
+            this.TPsectorInfo.Controls.Add(this.LBLinfoZoneInfo);
+            this.TPsectorInfo.Controls.Add(this.LBLinfoZone);
+            this.TPsectorInfo.Controls.Add(this.LBLinfoSectorInfo);
+            this.TPsectorInfo.Controls.Add(this.LBLinfoSector);
+            this.TPsectorInfo.Location = new System.Drawing.Point(4, 22);
+            this.TPsectorInfo.Name = "TPsectorInfo";
+            this.TPsectorInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.TPsectorInfo.Size = new System.Drawing.Size(863, 387);
+            this.TPsectorInfo.TabIndex = 4;
+            this.TPsectorInfo.Text = "Информация О Секторе";
+            this.TPsectorInfo.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(264, 40);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(80, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // LBLinfoZoneInfo
+            // 
+            this.LBLinfoZoneInfo.AutoSize = true;
+            this.LBLinfoZoneInfo.Location = new System.Drawing.Point(402, 19);
+            this.LBLinfoZoneInfo.Name = "LBLinfoZoneInfo";
+            this.LBLinfoZoneInfo.Size = new System.Drawing.Size(35, 13);
+            this.LBLinfoZoneInfo.TabIndex = 3;
+            this.LBLinfoZoneInfo.Text = "label1";
+            // 
+            // LBLinfoZone
+            // 
+            this.LBLinfoZone.AutoSize = true;
+            this.LBLinfoZone.Location = new System.Drawing.Point(261, 19);
+            this.LBLinfoZone.Name = "LBLinfoZone";
+            this.LBLinfoZone.Size = new System.Drawing.Size(83, 13);
+            this.LBLinfoZone.TabIndex = 2;
+            this.LBLinfoZone.Text = "Выберите зону";
+            // 
+            // LBLinfoSectorInfo
+            // 
+            this.LBLinfoSectorInfo.AutoSize = true;
+            this.LBLinfoSectorInfo.Location = new System.Drawing.Point(34, 49);
+            this.LBLinfoSectorInfo.Name = "LBLinfoSectorInfo";
+            this.LBLinfoSectorInfo.Size = new System.Drawing.Size(118, 13);
+            this.LBLinfoSectorInfo.TabIndex = 1;
+            this.LBLinfoSectorInfo.Text = "Никакой информации";
+            // 
+            // LBLinfoSector
+            // 
+            this.LBLinfoSector.AutoSize = true;
+            this.LBLinfoSector.Location = new System.Drawing.Point(31, 19);
+            this.LBLinfoSector.Name = "LBLinfoSector";
+            this.LBLinfoSector.Size = new System.Drawing.Size(129, 13);
+            this.LBLinfoSector.TabIndex = 0;
+            this.LBLinfoSector.Text = "Информация о секторе:";
+            // 
+            // NUDafterSpawn10
+            // 
+            this.NUDafterSpawn10.Location = new System.Drawing.Point(701, 283);
+            this.NUDafterSpawn10.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn10.Name = "NUDafterSpawn10";
+            this.NUDafterSpawn10.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn10.TabIndex = 43;
+            // 
+            // NUDafterSpawn9
+            // 
+            this.NUDafterSpawn9.Location = new System.Drawing.Point(701, 257);
+            this.NUDafterSpawn9.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn9.Name = "NUDafterSpawn9";
+            this.NUDafterSpawn9.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn9.TabIndex = 42;
+            // 
+            // NUDafterSpawn8
+            // 
+            this.NUDafterSpawn8.Location = new System.Drawing.Point(701, 231);
+            this.NUDafterSpawn8.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn8.Name = "NUDafterSpawn8";
+            this.NUDafterSpawn8.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn8.TabIndex = 41;
+            // 
+            // NUDafterSpawn7
+            // 
+            this.NUDafterSpawn7.Location = new System.Drawing.Point(701, 205);
+            this.NUDafterSpawn7.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn7.Name = "NUDafterSpawn7";
+            this.NUDafterSpawn7.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn7.TabIndex = 40;
+            // 
+            // NUDafterSpawn6
+            // 
+            this.NUDafterSpawn6.Location = new System.Drawing.Point(701, 179);
+            this.NUDafterSpawn6.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn6.Name = "NUDafterSpawn6";
+            this.NUDafterSpawn6.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn6.TabIndex = 39;
+            // 
+            // NUDafterSpawn5
+            // 
+            this.NUDafterSpawn5.Location = new System.Drawing.Point(701, 153);
+            this.NUDafterSpawn5.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn5.Name = "NUDafterSpawn5";
+            this.NUDafterSpawn5.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn5.TabIndex = 38;
+            // 
+            // NUDafterSpawn4
+            // 
+            this.NUDafterSpawn4.Location = new System.Drawing.Point(701, 127);
+            this.NUDafterSpawn4.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn4.Name = "NUDafterSpawn4";
+            this.NUDafterSpawn4.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn4.TabIndex = 37;
+            // 
+            // NUDafterSpawn3
+            // 
+            this.NUDafterSpawn3.Location = new System.Drawing.Point(701, 101);
+            this.NUDafterSpawn3.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn3.Name = "NUDafterSpawn3";
+            this.NUDafterSpawn3.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn3.TabIndex = 36;
+            // 
+            // NUDafterSpawn2
+            // 
+            this.NUDafterSpawn2.Location = new System.Drawing.Point(701, 75);
+            this.NUDafterSpawn2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn2.Name = "NUDafterSpawn2";
+            this.NUDafterSpawn2.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn2.TabIndex = 35;
+            this.NUDafterSpawn2.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // NUDafterSpawn1
+            // 
+            this.NUDafterSpawn1.Location = new System.Drawing.Point(701, 49);
+            this.NUDafterSpawn1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDafterSpawn1.Name = "NUDafterSpawn1";
+            this.NUDafterSpawn1.Size = new System.Drawing.Size(102, 20);
+            this.NUDafterSpawn1.TabIndex = 34;
+            this.NUDafterSpawn1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // NUDstartChance
+            // 
+            this.NUDstartChance.Location = new System.Drawing.Point(540, 348);
+            this.NUDstartChance.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NUDstartChance.Name = "NUDstartChance";
+            this.NUDstartChance.Size = new System.Drawing.Size(102, 20);
+            this.NUDstartChance.TabIndex = 44;
+            this.NUDstartChance.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // LBLstartChance
+            // 
+            this.LBLstartChance.AutoSize = true;
+            this.LBLstartChance.Location = new System.Drawing.Point(540, 315);
+            this.LBLstartChance.Name = "LBLstartChance";
+            this.LBLstartChance.Size = new System.Drawing.Size(93, 13);
+            this.LBLstartChance.TabIndex = 45;
+            this.LBLstartChance.Text = "Начальный шанс";
+            // 
+            // BTNreshuffle
+            // 
+            this.BTNreshuffle.Location = new System.Drawing.Point(397, 345);
+            this.BTNreshuffle.Name = "BTNreshuffle";
+            this.BTNreshuffle.Size = new System.Drawing.Size(109, 23);
+            this.BTNreshuffle.TabIndex = 46;
+            this.BTNreshuffle.Text = "Перемешать врагов";
+            this.BTNreshuffle.UseVisualStyleBackColor = true;
+            // 
+            // LBLafterSpawn
+            // 
+            this.LBLafterSpawn.AutoSize = true;
+            this.LBLafterSpawn.Location = new System.Drawing.Point(668, 19);
+            this.LBLafterSpawn.Name = "LBLafterSpawn";
+            this.LBLafterSpawn.Size = new System.Drawing.Size(163, 13);
+            this.LBLafterSpawn.TabIndex = 47;
+            this.LBLafterSpawn.Text = "Уменьшение после появления";
+            // 
+            // CBzoneCycled
+            // 
+            this.CBzoneCycled.AutoSize = true;
+            this.CBzoneCycled.Checked = true;
+            this.CBzoneCycled.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CBzoneCycled.Location = new System.Drawing.Point(658, 315);
+            this.CBzoneCycled.Name = "CBzoneCycled";
+            this.CBzoneCycled.Size = new System.Drawing.Size(83, 17);
+            this.CBzoneCycled.TabIndex = 48;
+            this.CBzoneCycled.Text = "Цикличный";
+            this.CBzoneCycled.UseVisualStyleBackColor = true;
+            // 
+            // CBzoneInterrupt
+            // 
+            this.CBzoneInterrupt.AutoSize = true;
+            this.CBzoneInterrupt.Location = new System.Drawing.Point(658, 338);
+            this.CBzoneInterrupt.Name = "CBzoneInterrupt";
+            this.CBzoneInterrupt.Size = new System.Drawing.Size(180, 43);
+            this.CBzoneInterrupt.TabIndex = 49;
+            this.CBzoneInterrupt.Text = "Прерывать цикличность, если\r\nне появился враг с\r\nуменьшением до появления";
+            this.CBzoneInterrupt.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 21);
+            this.label1.Location = new System.Drawing.Point(240, 257);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 13);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "\"Перед\" может быть направлен";
-            // 
-            // LBLzoneEnemies
-            // 
-            this.LBLzoneEnemies.AutoSize = true;
-            this.LBLzoneEnemies.Location = new System.Drawing.Point(225, 162);
-            this.LBLzoneEnemies.Name = "LBLzoneEnemies";
-            this.LBLzoneEnemies.Size = new System.Drawing.Size(0, 13);
-            this.LBLzoneEnemies.TabIndex = 31;
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 365);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(871, 413);
             this.Controls.Add(this.TC);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.Text = "Генератор Сектора";
             this.TC.ResumeLayout(false);
             this.TPsectorGenerator.ResumeLayout(false);
             this.TPsectorGenerator.PerformLayout();
@@ -1366,19 +1773,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUDsectorName3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDsectorName2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDsectorName1)).EndInit();
-            this.ZoneGenerator.ResumeLayout(false);
-            this.ZoneGenerator.PerformLayout();
+            this.CBzoneGenerator.ResumeLayout(false);
+            this.CBzoneGenerator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDbeforeSpawn1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDzoneTypes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUDzoneEnemy10)).EndInit();
+            this.TPsectorInfo.ResumeLayout(false);
+            this.TPsectorInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDafterSpawn1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDstartChance)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1449,39 +1870,66 @@
         private System.Windows.Forms.NumericUpDown NUDsectorMaxZones1;
         private System.Windows.Forms.NumericUpDown NUDsectorMinZones1;
         private System.Windows.Forms.TextBox TBsectorType1;
-        private System.Windows.Forms.Label LBLresult;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBLsectorHint;
+        private System.Windows.Forms.Label LBLzonegeneratorSide;
         private System.Windows.Forms.CheckedListBox CLBzonesSides;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy10;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn10;
         private System.Windows.Forms.TextBox TBzoneEnemy10;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy9;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn9;
         private System.Windows.Forms.TextBox TBzoneEnemy9;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy8;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn8;
         private System.Windows.Forms.TextBox TBzoneEnemy8;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy7;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn7;
         private System.Windows.Forms.TextBox TBzoneEnemy7;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy6;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn6;
         private System.Windows.Forms.TextBox TBzoneEnemy6;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy5;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn5;
         private System.Windows.Forms.TextBox TBzoneEnemy5;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy4;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn4;
         private System.Windows.Forms.TextBox TBzoneEnemy4;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy3;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn3;
         private System.Windows.Forms.TextBox TBzoneEnemy3;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy2;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn2;
         private System.Windows.Forms.TextBox TBzoneEnemy2;
         private System.Windows.Forms.Label LBLzoneCounter;
         private System.Windows.Forms.Button BTNzoneCounter;
-        private System.Windows.Forms.NumericUpDown NUDzoneEnemy1;
-        private System.Windows.Forms.Label LBLzoneResult;
+        private System.Windows.Forms.NumericUpDown NUDbeforeSpawn1;
+        private System.Windows.Forms.Label LBLzoneInfo;
         private System.Windows.Forms.Button BTNzoneResult;
         private System.Windows.Forms.TextBox TBzoneEnemy1;
-        private System.Windows.Forms.Label LBLzoneEmemiesValues;
+        private System.Windows.Forms.Label LBLzoneBeforeSpawn;
         private System.Windows.Forms.Label LBLzoneEnemiesNames;
         private System.Windows.Forms.NumericUpDown NUDzoneTypes;
         private System.Windows.Forms.Label LBLzoneGeneratorTypes;
-        protected System.Windows.Forms.Label LBLzoneEnemies;
-        protected System.Windows.Forms.TabPage ZoneGenerator;
+        protected System.Windows.Forms.Label LBLzoneInfoGenerated;
+        protected System.Windows.Forms.TabPage CBzoneGenerator;
+        private System.Windows.Forms.TabPage TPbuildingGenerator;
+        private System.Windows.Forms.TabPage TPsectorInfo;
+        private System.Windows.Forms.Label LBLinfoSector;
+        private System.Windows.Forms.Label LBLsectorResult;
+        private System.Windows.Forms.Label LBLinfoZone;
+        private System.Windows.Forms.Label LBLinfoSectorInfo;
+        private System.Windows.Forms.Label LBLinfoZoneInfo;
+        private System.Windows.Forms.Label LBLzoneCount;
+        private System.Windows.Forms.NumericUpDown NUDzoneCount;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox CBzoneInterrupt;
+        private System.Windows.Forms.CheckBox CBzoneCycled;
+        private System.Windows.Forms.Label LBLafterSpawn;
+        private System.Windows.Forms.Button BTNreshuffle;
+        private System.Windows.Forms.Label LBLstartChance;
+        private System.Windows.Forms.NumericUpDown NUDstartChance;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn10;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn9;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn8;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn7;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn6;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn5;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn4;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn3;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn2;
+        private System.Windows.Forms.NumericUpDown NUDafterSpawn1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

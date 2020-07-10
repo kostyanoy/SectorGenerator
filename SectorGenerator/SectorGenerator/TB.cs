@@ -9,21 +9,15 @@ namespace SectorGenerator
 {
     static class TB
     {
+        //сбор данных из TextBox'ов
         public static string[] collectTB(params TextBox[] TBoxes)
-        {
-            int len = 0;
-            for (int i = 0; i < 9; i++)
+        { 
+            string[] names = new string[TBoxes.Length];
+            for (int i = 0; i < TBoxes.Length; i++)
             {
-                if (TBoxes[i].Text != "")
-                    len++;
+                names[i] = TBoxes[i].Text;
             }
-            string[] names = new string[len];
-            for (int i = 0; i < 9; i++)
-            {
-                if (TBoxes[i].Text != "")
-                    names[i] = TBoxes[i].Text;
-            }
-
+            //возвращение массива Textbox'ов
             return names;
         }
     }
