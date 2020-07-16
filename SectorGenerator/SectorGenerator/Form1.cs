@@ -425,7 +425,7 @@ namespace SectorGenerator
                 for(int j = 0; j<buildingsCount; j++)
                 {
 
-                    buildingInfo = "Здание №" + (j+1).ToString() + "\n\n";
+                    buildingInfo = "Здание №" + (j+1).ToString() + "\n";
                     buildingType = getName(buildingTypes, buildingTypeValues);
 
                     ind = findIndex(buildingTypes, buildingType);
@@ -436,6 +436,7 @@ namespace SectorGenerator
                         Convert.ToInt32(NUDlootStartChance.Value), CBlootCycled.Checked, 
                         CBlootInterrupt.Checked);
 
+                    buildingInfo += buildingType + "\n\n";
                     buildingInfo += loot;
 
                     buildings[j] = buildingInfo;

@@ -448,7 +448,7 @@
             // 
             this.NUDsectorType9.Location = new System.Drawing.Point(606, 271);
             this.NUDsectorType9.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -460,7 +460,7 @@
             // 
             this.NUDsectorMaxZones9.Location = new System.Drawing.Point(530, 272);
             this.NUDsectorMaxZones9.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -472,7 +472,7 @@
             // 
             this.NUDsectorMinZones9.Location = new System.Drawing.Point(477, 272);
             this.NUDsectorMinZones9.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -491,7 +491,7 @@
             // 
             this.NUDsectorType8.Location = new System.Drawing.Point(606, 245);
             this.NUDsectorType8.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -503,7 +503,7 @@
             // 
             this.NUDsectorMaxZones8.Location = new System.Drawing.Point(530, 246);
             this.NUDsectorMaxZones8.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -515,7 +515,7 @@
             // 
             this.NUDsectorMinZones8.Location = new System.Drawing.Point(477, 246);
             this.NUDsectorMinZones8.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -534,7 +534,7 @@
             // 
             this.NUDsectorType7.Location = new System.Drawing.Point(606, 219);
             this.NUDsectorType7.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -546,7 +546,7 @@
             // 
             this.NUDsectorMaxZones7.Location = new System.Drawing.Point(530, 220);
             this.NUDsectorMaxZones7.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -558,7 +558,7 @@
             // 
             this.NUDsectorMinZones7.Location = new System.Drawing.Point(477, 220);
             this.NUDsectorMinZones7.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -577,7 +577,7 @@
             // 
             this.NUDsectorType6.Location = new System.Drawing.Point(606, 193);
             this.NUDsectorType6.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -594,7 +594,7 @@
             // 
             this.NUDsectorMaxZones6.Location = new System.Drawing.Point(530, 194);
             this.NUDsectorMaxZones6.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -611,7 +611,7 @@
             // 
             this.NUDsectorMinZones6.Location = new System.Drawing.Point(477, 194);
             this.NUDsectorMinZones6.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -636,7 +636,7 @@
             // 
             this.NUDsectorType5.Location = new System.Drawing.Point(606, 167);
             this.NUDsectorType5.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -653,7 +653,7 @@
             // 
             this.NUDsectorMaxZones5.Location = new System.Drawing.Point(530, 168);
             this.NUDsectorMaxZones5.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -670,7 +670,7 @@
             // 
             this.NUDsectorMinZones5.Location = new System.Drawing.Point(477, 168);
             this.NUDsectorMinZones5.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -695,7 +695,7 @@
             // 
             this.NUDsectorType4.Location = new System.Drawing.Point(606, 141);
             this.NUDsectorType4.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -712,7 +712,7 @@
             // 
             this.NUDsectorMaxZones4.Location = new System.Drawing.Point(530, 142);
             this.NUDsectorMaxZones4.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -729,7 +729,7 @@
             // 
             this.NUDsectorMinZones4.Location = new System.Drawing.Point(477, 142);
             this.NUDsectorMinZones4.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -754,7 +754,7 @@
             // 
             this.NUDsectorType3.Location = new System.Drawing.Point(606, 115);
             this.NUDsectorType3.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -771,7 +771,7 @@
             // 
             this.NUDsectorMaxZones3.Location = new System.Drawing.Point(530, 116);
             this.NUDsectorMaxZones3.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -788,7 +788,7 @@
             // 
             this.NUDsectorMinZones3.Location = new System.Drawing.Point(477, 116);
             this.NUDsectorMinZones3.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -813,7 +813,7 @@
             // 
             this.NUDsectorType2.Location = new System.Drawing.Point(606, 89);
             this.NUDsectorType2.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -830,7 +830,7 @@
             // 
             this.NUDsectorMaxZones2.Location = new System.Drawing.Point(530, 90);
             this.NUDsectorMaxZones2.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -847,7 +847,7 @@
             // 
             this.NUDsectorMinZones2.Location = new System.Drawing.Point(477, 90);
             this.NUDsectorMinZones2.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -872,7 +872,7 @@
             // 
             this.NUDsectorType1.Location = new System.Drawing.Point(606, 63);
             this.NUDsectorType1.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -889,7 +889,7 @@
             // 
             this.NUDsectorMaxZones1.Location = new System.Drawing.Point(530, 64);
             this.NUDsectorMaxZones1.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -906,7 +906,7 @@
             // 
             this.NUDsectorMinZones1.Location = new System.Drawing.Point(477, 64);
             this.NUDsectorMinZones1.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -949,7 +949,7 @@
             // 
             this.NUDsectorName9.Location = new System.Drawing.Point(178, 271);
             this.NUDsectorName9.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -968,7 +968,7 @@
             // 
             this.NUDsectorName8.Location = new System.Drawing.Point(178, 245);
             this.NUDsectorName8.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -987,7 +987,7 @@
             // 
             this.NUDsectorName7.Location = new System.Drawing.Point(178, 219);
             this.NUDsectorName7.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -1006,7 +1006,7 @@
             // 
             this.NUDsectorName6.Location = new System.Drawing.Point(178, 193);
             this.NUDsectorName6.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -1025,7 +1025,7 @@
             // 
             this.NUDsectorName5.Location = new System.Drawing.Point(178, 167);
             this.NUDsectorName5.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -1044,7 +1044,7 @@
             // 
             this.NUDsectorName4.Location = new System.Drawing.Point(178, 141);
             this.NUDsectorName4.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -1063,7 +1063,7 @@
             // 
             this.NUDsectorName3.Location = new System.Drawing.Point(178, 115);
             this.NUDsectorName3.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -1088,7 +1088,7 @@
             // 
             this.NUDsectorName2.Location = new System.Drawing.Point(178, 89);
             this.NUDsectorName2.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -1113,7 +1113,7 @@
             // 
             this.NUDsectorName1.Location = new System.Drawing.Point(178, 63);
             this.NUDsectorName1.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -2337,6 +2337,11 @@
             // NUDbuildingTypeChange10
             // 
             this.NUDbuildingTypeChange10.Location = new System.Drawing.Point(276, 290);
+            this.NUDbuildingTypeChange10.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange10.Name = "NUDbuildingTypeChange10";
             this.NUDbuildingTypeChange10.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange10.TabIndex = 33;
@@ -2344,6 +2349,11 @@
             // NUDbuildingType10
             // 
             this.NUDbuildingType10.Location = new System.Drawing.Point(154, 289);
+            this.NUDbuildingType10.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType10.Name = "NUDbuildingType10";
             this.NUDbuildingType10.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType10.TabIndex = 32;
@@ -2358,6 +2368,11 @@
             // NUDbuildingTypeChange9
             // 
             this.NUDbuildingTypeChange9.Location = new System.Drawing.Point(276, 264);
+            this.NUDbuildingTypeChange9.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange9.Name = "NUDbuildingTypeChange9";
             this.NUDbuildingTypeChange9.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange9.TabIndex = 30;
@@ -2365,6 +2380,11 @@
             // NUDbuildingType9
             // 
             this.NUDbuildingType9.Location = new System.Drawing.Point(154, 263);
+            this.NUDbuildingType9.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType9.Name = "NUDbuildingType9";
             this.NUDbuildingType9.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType9.TabIndex = 29;
@@ -2379,6 +2399,11 @@
             // NUDbuildingTypeChange8
             // 
             this.NUDbuildingTypeChange8.Location = new System.Drawing.Point(276, 238);
+            this.NUDbuildingTypeChange8.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange8.Name = "NUDbuildingTypeChange8";
             this.NUDbuildingTypeChange8.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange8.TabIndex = 27;
@@ -2386,6 +2411,11 @@
             // NUDbuildingType8
             // 
             this.NUDbuildingType8.Location = new System.Drawing.Point(154, 237);
+            this.NUDbuildingType8.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType8.Name = "NUDbuildingType8";
             this.NUDbuildingType8.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType8.TabIndex = 26;
@@ -2400,6 +2430,11 @@
             // NUDbuildingTypeChange7
             // 
             this.NUDbuildingTypeChange7.Location = new System.Drawing.Point(276, 212);
+            this.NUDbuildingTypeChange7.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange7.Name = "NUDbuildingTypeChange7";
             this.NUDbuildingTypeChange7.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange7.TabIndex = 24;
@@ -2407,6 +2442,11 @@
             // NUDbuildingType7
             // 
             this.NUDbuildingType7.Location = new System.Drawing.Point(154, 211);
+            this.NUDbuildingType7.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType7.Name = "NUDbuildingType7";
             this.NUDbuildingType7.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType7.TabIndex = 23;
@@ -2421,6 +2461,11 @@
             // NUDbuildingTypeChange6
             // 
             this.NUDbuildingTypeChange6.Location = new System.Drawing.Point(276, 186);
+            this.NUDbuildingTypeChange6.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange6.Name = "NUDbuildingTypeChange6";
             this.NUDbuildingTypeChange6.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange6.TabIndex = 21;
@@ -2428,6 +2473,11 @@
             // NUDbuildingType6
             // 
             this.NUDbuildingType6.Location = new System.Drawing.Point(154, 185);
+            this.NUDbuildingType6.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType6.Name = "NUDbuildingType6";
             this.NUDbuildingType6.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType6.TabIndex = 20;
@@ -2442,6 +2492,11 @@
             // NUDbuildingTypeChange5
             // 
             this.NUDbuildingTypeChange5.Location = new System.Drawing.Point(276, 160);
+            this.NUDbuildingTypeChange5.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange5.Name = "NUDbuildingTypeChange5";
             this.NUDbuildingTypeChange5.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange5.TabIndex = 18;
@@ -2449,6 +2504,11 @@
             // NUDbuildingType5
             // 
             this.NUDbuildingType5.Location = new System.Drawing.Point(154, 159);
+            this.NUDbuildingType5.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType5.Name = "NUDbuildingType5";
             this.NUDbuildingType5.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType5.TabIndex = 17;
@@ -2463,6 +2523,11 @@
             // NUDbuildingTypeChange4
             // 
             this.NUDbuildingTypeChange4.Location = new System.Drawing.Point(276, 134);
+            this.NUDbuildingTypeChange4.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange4.Name = "NUDbuildingTypeChange4";
             this.NUDbuildingTypeChange4.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange4.TabIndex = 15;
@@ -2470,6 +2535,11 @@
             // NUDbuildingType4
             // 
             this.NUDbuildingType4.Location = new System.Drawing.Point(154, 133);
+            this.NUDbuildingType4.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType4.Name = "NUDbuildingType4";
             this.NUDbuildingType4.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType4.TabIndex = 14;
@@ -2484,6 +2554,11 @@
             // NUDbuildingTypeChange3
             // 
             this.NUDbuildingTypeChange3.Location = new System.Drawing.Point(276, 108);
+            this.NUDbuildingTypeChange3.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange3.Name = "NUDbuildingTypeChange3";
             this.NUDbuildingTypeChange3.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange3.TabIndex = 12;
@@ -2496,6 +2571,11 @@
             // NUDbuildingType3
             // 
             this.NUDbuildingType3.Location = new System.Drawing.Point(154, 107);
+            this.NUDbuildingType3.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType3.Name = "NUDbuildingType3";
             this.NUDbuildingType3.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType3.TabIndex = 11;
@@ -2516,6 +2596,11 @@
             // NUDbuildingTypeChange2
             // 
             this.NUDbuildingTypeChange2.Location = new System.Drawing.Point(276, 82);
+            this.NUDbuildingTypeChange2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange2.Name = "NUDbuildingTypeChange2";
             this.NUDbuildingTypeChange2.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange2.TabIndex = 9;
@@ -2528,6 +2613,11 @@
             // NUDbuildingType2
             // 
             this.NUDbuildingType2.Location = new System.Drawing.Point(154, 81);
+            this.NUDbuildingType2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType2.Name = "NUDbuildingType2";
             this.NUDbuildingType2.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType2.TabIndex = 8;
@@ -2547,7 +2637,7 @@
             // 
             // BTNbuildingsGenerate
             // 
-            this.BTNbuildingsGenerate.Location = new System.Drawing.Point(20, 359);
+            this.BTNbuildingsGenerate.Location = new System.Drawing.Point(20, 370);
             this.BTNbuildingsGenerate.Name = "BTNbuildingsGenerate";
             this.BTNbuildingsGenerate.Size = new System.Drawing.Size(136, 23);
             this.BTNbuildingsGenerate.TabIndex = 6;
@@ -2577,6 +2667,11 @@
             // NUDbuildingTypeChange1
             // 
             this.NUDbuildingTypeChange1.Location = new System.Drawing.Point(276, 56);
+            this.NUDbuildingTypeChange1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingTypeChange1.Name = "NUDbuildingTypeChange1";
             this.NUDbuildingTypeChange1.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingTypeChange1.TabIndex = 3;
@@ -2589,6 +2684,11 @@
             // NUDbuildingType1
             // 
             this.NUDbuildingType1.Location = new System.Drawing.Point(154, 55);
+            this.NUDbuildingType1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.NUDbuildingType1.Name = "NUDbuildingType1";
             this.NUDbuildingType1.Size = new System.Drawing.Size(106, 20);
             this.NUDbuildingType1.TabIndex = 2;
