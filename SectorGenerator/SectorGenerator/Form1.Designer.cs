@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TC = new System.Windows.Forms.TabControl();
             this.TPsectorGenerator = new System.Windows.Forms.TabPage();
+            this.TBsectorMainNameChange = new System.Windows.Forms.TextBox();
+            this.BTNsectorMainNameChange = new System.Windows.Forms.Button();
+            this.LBLsectorMainName = new System.Windows.Forms.Label();
+            this.BTNcreateNewSector = new System.Windows.Forms.Button();
             this.LBLsectorResult = new System.Windows.Forms.Label();
             this.LBLsectorHint = new System.Windows.Forms.Label();
             this.NUDsectorType9 = new System.Windows.Forms.NumericUpDown();
@@ -223,6 +228,8 @@
             this.TBbuildingType1 = new System.Windows.Forms.TextBox();
             this.LBLbuildingNames = new System.Windows.Forms.Label();
             this.TPsectorInfo = new System.Windows.Forms.TabPage();
+            this.CBinfoSectorChoose = new System.Windows.Forms.ComboBox();
+            this.LBLinfoSectorChange = new System.Windows.Forms.Label();
             this.LBLinfoBuildingsInfo2 = new System.Windows.Forms.Label();
             this.LBLinfoBuildingsInfo1 = new System.Windows.Forms.Label();
             this.LBLinfoBuildings = new System.Windows.Forms.Label();
@@ -355,6 +362,10 @@
             // 
             // TPsectorGenerator
             // 
+            this.TPsectorGenerator.Controls.Add(this.TBsectorMainNameChange);
+            this.TPsectorGenerator.Controls.Add(this.BTNsectorMainNameChange);
+            this.TPsectorGenerator.Controls.Add(this.LBLsectorMainName);
+            this.TPsectorGenerator.Controls.Add(this.BTNcreateNewSector);
             this.TPsectorGenerator.Controls.Add(this.LBLsectorResult);
             this.TPsectorGenerator.Controls.Add(this.LBLsectorHint);
             this.TPsectorGenerator.Controls.Add(this.NUDsectorType9);
@@ -427,10 +438,49 @@
             this.TPsectorGenerator.Text = "Генератор Сектора";
             this.TPsectorGenerator.UseVisualStyleBackColor = true;
             // 
+            // TBsectorMainNameChange
+            // 
+            this.TBsectorMainNameChange.Location = new System.Drawing.Point(357, 371);
+            this.TBsectorMainNameChange.Name = "TBsectorMainNameChange";
+            this.TBsectorMainNameChange.Size = new System.Drawing.Size(155, 20);
+            this.TBsectorMainNameChange.TabIndex = 67;
+            this.TBsectorMainNameChange.Text = "Сектор №1";
+            // 
+            // BTNsectorMainNameChange
+            // 
+            this.BTNsectorMainNameChange.Location = new System.Drawing.Point(196, 370);
+            this.BTNsectorMainNameChange.Name = "BTNsectorMainNameChange";
+            this.BTNsectorMainNameChange.Size = new System.Drawing.Size(155, 23);
+            this.BTNsectorMainNameChange.TabIndex = 66;
+            this.BTNsectorMainNameChange.Text = "Изменить имя текущего сектора";
+            this.BTNsectorMainNameChange.UseVisualStyleBackColor = true;
+            this.BTNsectorMainNameChange.Click += new System.EventHandler(this.BTNsectorMainNameChange_Click);
+            // 
+            // LBLsectorMainName
+            // 
+            this.LBLsectorMainName.AutoSize = true;
+            this.LBLsectorMainName.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LBLsectorMainName.Location = new System.Drawing.Point(27, 3);
+            this.LBLsectorMainName.Name = "LBLsectorMainName";
+            this.LBLsectorMainName.Size = new System.Drawing.Size(117, 27);
+            this.LBLsectorMainName.TabIndex = 65;
+            this.LBLsectorMainName.Text = "Сектор №1";
+            // 
+            // BTNcreateNewSector
+            // 
+            this.BTNcreateNewSector.Location = new System.Drawing.Point(32, 370);
+            this.BTNcreateNewSector.Name = "BTNcreateNewSector";
+            this.BTNcreateNewSector.Size = new System.Drawing.Size(154, 23);
+            this.BTNcreateNewSector.TabIndex = 64;
+            this.BTNcreateNewSector.Text = "Создать новый сектор";
+            this.BTNcreateNewSector.UseVisualStyleBackColor = true;
+            this.BTNcreateNewSector.Click += new System.EventHandler(this.BTNcreateNewSector_Click);
+            // 
             // LBLsectorResult
             // 
             this.LBLsectorResult.AutoSize = true;
-            this.LBLsectorResult.Location = new System.Drawing.Point(523, 351);
+            this.LBLsectorResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LBLsectorResult.Location = new System.Drawing.Point(512, 323);
             this.LBLsectorResult.Name = "LBLsectorResult";
             this.LBLsectorResult.Size = new System.Drawing.Size(0, 13);
             this.LBLsectorResult.TabIndex = 63;
@@ -438,7 +488,8 @@
             // LBLsectorHint
             // 
             this.LBLsectorHint.AutoSize = true;
-            this.LBLsectorHint.Location = new System.Drawing.Point(250, 336);
+            this.LBLsectorHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LBLsectorHint.Location = new System.Drawing.Point(250, 315);
             this.LBLsectorHint.Name = "LBLsectorHint";
             this.LBLsectorHint.Size = new System.Drawing.Size(219, 26);
             this.LBLsectorHint.TabIndex = 62;
@@ -930,7 +981,7 @@
             // LBLsectorMaxZones
             // 
             this.LBLsectorMaxZones.AutoSize = true;
-            this.LBLsectorMaxZones.Location = new System.Drawing.Point(527, 31);
+            this.LBLsectorMaxZones.Location = new System.Drawing.Point(527, 44);
             this.LBLsectorMaxZones.Name = "LBLsectorMaxZones";
             this.LBLsectorMaxZones.Size = new System.Drawing.Size(34, 13);
             this.LBLsectorMaxZones.TabIndex = 25;
@@ -939,7 +990,7 @@
             // LBLsectorMinZones
             // 
             this.LBLsectorMinZones.AutoSize = true;
-            this.LBLsectorMinZones.Location = new System.Drawing.Point(474, 31);
+            this.LBLsectorMinZones.Location = new System.Drawing.Point(474, 44);
             this.LBLsectorMinZones.Name = "LBLsectorMinZones";
             this.LBLsectorMinZones.Size = new System.Drawing.Size(28, 13);
             this.LBLsectorMinZones.TabIndex = 24;
@@ -1137,7 +1188,7 @@
             // LBLsectorTypeValues
             // 
             this.LBLsectorTypeValues.AutoSize = true;
-            this.LBLsectorTypeValues.Location = new System.Drawing.Point(621, 18);
+            this.LBLsectorTypeValues.Location = new System.Drawing.Point(621, 31);
             this.LBLsectorTypeValues.Name = "LBLsectorTypeValues";
             this.LBLsectorTypeValues.Size = new System.Drawing.Size(49, 13);
             this.LBLsectorTypeValues.TabIndex = 5;
@@ -1146,7 +1197,7 @@
             // LBLsectorNumZones
             // 
             this.LBLsectorNumZones.AutoSize = true;
-            this.LBLsectorNumZones.Location = new System.Drawing.Point(474, 18);
+            this.LBLsectorNumZones.Location = new System.Drawing.Point(474, 31);
             this.LBLsectorNumZones.Name = "LBLsectorNumZones";
             this.LBLsectorNumZones.Size = new System.Drawing.Size(87, 13);
             this.LBLsectorNumZones.TabIndex = 4;
@@ -1155,7 +1206,7 @@
             // LBLsectorType
             // 
             this.LBLsectorType.AutoSize = true;
-            this.LBLsectorType.Location = new System.Drawing.Point(326, 18);
+            this.LBLsectorType.Location = new System.Drawing.Point(326, 31);
             this.LBLsectorType.Name = "LBLsectorType";
             this.LBLsectorType.Size = new System.Drawing.Size(70, 13);
             this.LBLsectorType.TabIndex = 3;
@@ -1164,7 +1215,7 @@
             // LBLsectorValues
             // 
             this.LBLsectorValues.AutoSize = true;
-            this.LBLsectorValues.Location = new System.Drawing.Point(193, 18);
+            this.LBLsectorValues.Location = new System.Drawing.Point(193, 31);
             this.LBLsectorValues.Name = "LBLsectorValues";
             this.LBLsectorValues.Size = new System.Drawing.Size(49, 13);
             this.LBLsectorValues.TabIndex = 2;
@@ -1173,7 +1224,7 @@
             // LBLsectorNames
             // 
             this.LBLsectorNames.AutoSize = true;
-            this.LBLsectorNames.Location = new System.Drawing.Point(29, 18);
+            this.LBLsectorNames.Location = new System.Drawing.Point(29, 31);
             this.LBLsectorNames.Name = "LBLsectorNames";
             this.LBLsectorNames.Size = new System.Drawing.Size(124, 13);
             this.LBLsectorNames.TabIndex = 1;
@@ -1181,7 +1232,7 @@
             // 
             // BTNgenerateSector
             // 
-            this.BTNgenerateSector.Location = new System.Drawing.Point(32, 341);
+            this.BTNgenerateSector.Location = new System.Drawing.Point(32, 318);
             this.BTNgenerateSector.Name = "BTNgenerateSector";
             this.BTNgenerateSector.Size = new System.Drawing.Size(202, 23);
             this.BTNgenerateSector.TabIndex = 0;
@@ -1518,6 +1569,7 @@
             // LBLzoneInfoGenerated
             // 
             this.LBLzoneInfoGenerated.AutoSize = true;
+            this.LBLzoneInfoGenerated.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LBLzoneInfoGenerated.Location = new System.Drawing.Point(173, 353);
             this.LBLzoneInfoGenerated.Name = "LBLzoneInfoGenerated";
             this.LBLzoneInfoGenerated.Size = new System.Drawing.Size(0, 13);
@@ -1760,6 +1812,7 @@
             // LBLzoneInfo
             // 
             this.LBLzoneInfo.AutoSize = true;
+            this.LBLzoneInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LBLzoneInfo.Location = new System.Drawing.Point(10, 277);
             this.LBLzoneInfo.Name = "LBLzoneInfo";
             this.LBLzoneInfo.Size = new System.Drawing.Size(210, 26);
@@ -1916,6 +1969,7 @@
             // LBLbuildingHint
             // 
             this.LBLbuildingHint.AutoSize = true;
+            this.LBLbuildingHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LBLbuildingHint.Location = new System.Drawing.Point(17, 317);
             this.LBLbuildingHint.Name = "LBLbuildingHint";
             this.LBLbuildingHint.Size = new System.Drawing.Size(220, 26);
@@ -2330,9 +2384,9 @@
             this.LBLloot.AutoSize = true;
             this.LBLloot.Location = new System.Drawing.Point(417, 19);
             this.LBLloot.Name = "LBLloot";
-            this.LBLloot.Size = new System.Drawing.Size(95, 13);
+            this.LBLloot.Size = new System.Drawing.Size(82, 13);
             this.LBLloot.TabIndex = 50;
-            this.LBLloot.Text = "Названия врагов";
+            this.LBLloot.Text = "Названия лута";
             // 
             // NUDbuildingTypeChange10
             // 
@@ -2718,6 +2772,8 @@
             // TPsectorInfo
             // 
             this.TPsectorInfo.AutoScroll = true;
+            this.TPsectorInfo.Controls.Add(this.CBinfoSectorChoose);
+            this.TPsectorInfo.Controls.Add(this.LBLinfoSectorChange);
             this.TPsectorInfo.Controls.Add(this.LBLinfoBuildingsInfo2);
             this.TPsectorInfo.Controls.Add(this.LBLinfoBuildingsInfo1);
             this.TPsectorInfo.Controls.Add(this.LBLinfoBuildings);
@@ -2734,6 +2790,25 @@
             this.TPsectorInfo.TabIndex = 4;
             this.TPsectorInfo.Text = "Информация О Секторе";
             this.TPsectorInfo.UseVisualStyleBackColor = true;
+            // 
+            // CBinfoSectorChoose
+            // 
+            this.CBinfoSectorChoose.FormattingEnabled = true;
+            this.CBinfoSectorChoose.Location = new System.Drawing.Point(36, 34);
+            this.CBinfoSectorChoose.Name = "CBinfoSectorChoose";
+            this.CBinfoSectorChoose.Size = new System.Drawing.Size(118, 21);
+            this.CBinfoSectorChoose.TabIndex = 10;
+            this.CBinfoSectorChoose.Text = "Сектор №1";
+            this.CBinfoSectorChoose.SelectedIndexChanged += new System.EventHandler(this.CBinfoSectorChoose_SelectedIndexChanged);
+            // 
+            // LBLinfoSectorChange
+            // 
+            this.LBLinfoSectorChange.AutoSize = true;
+            this.LBLinfoSectorChange.Location = new System.Drawing.Point(36, 19);
+            this.LBLinfoSectorChange.Name = "LBLinfoSectorChange";
+            this.LBLinfoSectorChange.Size = new System.Drawing.Size(95, 13);
+            this.LBLinfoSectorChange.TabIndex = 9;
+            this.LBLinfoSectorChange.Text = "Выберите сектор";
             // 
             // LBLinfoBuildingsInfo2
             // 
@@ -2800,7 +2875,7 @@
             // LBLinfoSectorInfo
             // 
             this.LBLinfoSectorInfo.AutoSize = true;
-            this.LBLinfoSectorInfo.Location = new System.Drawing.Point(34, 49);
+            this.LBLinfoSectorInfo.Location = new System.Drawing.Point(36, 164);
             this.LBLinfoSectorInfo.Name = "LBLinfoSectorInfo";
             this.LBLinfoSectorInfo.Size = new System.Drawing.Size(118, 13);
             this.LBLinfoSectorInfo.TabIndex = 1;
@@ -2809,7 +2884,7 @@
             // LBLinfoSector
             // 
             this.LBLinfoSector.AutoSize = true;
-            this.LBLinfoSector.Location = new System.Drawing.Point(31, 19);
+            this.LBLinfoSector.Location = new System.Drawing.Point(36, 134);
             this.LBLinfoSector.Name = "LBLinfoSector";
             this.LBLinfoSector.Size = new System.Drawing.Size(129, 13);
             this.LBLinfoSector.TabIndex = 0;
@@ -2823,6 +2898,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(862, 425);
             this.Controls.Add(this.TC);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Генератор Сектора";
@@ -3146,6 +3222,12 @@
         private System.Windows.Forms.TextBox TBbuildingType2;
         private System.Windows.Forms.Label LBLinfoBuildingsInfo2;
         private System.Windows.Forms.Label LBLinfoBuildingsInfo1;
+        private System.Windows.Forms.TextBox TBsectorMainNameChange;
+        private System.Windows.Forms.Button BTNsectorMainNameChange;
+        private System.Windows.Forms.Label LBLsectorMainName;
+        private System.Windows.Forms.Button BTNcreateNewSector;
+        private System.Windows.Forms.ComboBox CBinfoSectorChoose;
+        private System.Windows.Forms.Label LBLinfoSectorChange;
     }
 }
 

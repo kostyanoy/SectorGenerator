@@ -15,14 +15,23 @@ namespace SectorGenerator
     {
         Random ran = new Random();
         int counter = 0; //счётчик нажатий на кнопку
-        int[] shablon = {5, 5, 5}; //количество зданий в шаблонах
-        int[] zonesShablon; //номер шаблона каждой зоны
-        string[] zonesInfo; //информация о каждой зоне
-        string[][] buildingsInfo; //список списков зданий в каждой зоне
+        int[] shablon = { 5, 5, 5 }; //количество зданий в шаблонах
+        int[] zonesShablon = new int[1] { 1 }; //номер шаблона каждой зоны
+        string[] zonesNames = new string[1] { "" }; //названия каждой зоны
+        string[] zonesInfo = new string[1] { "" }; //информация о каждой зоне
+        string[][] buildingsInfo = new string[1][] { new string[1] { "" } }; //список списков зданий в каждой зоне
+
+        Sector selectedSector = new Sector("Сектор №1");
+        int sectorCounter = 1; //номер сектора
+        List<Sector> sectorsInfo = new List<Sector>();
+
+
 
         public Form1()
         {
             InitializeComponent();
+            sectorsInfo.Add(selectedSector);
+            CBinfoSectorChoose.Items.Add(selectedSector.SectorName);
         }
 
         //генерация сектора
@@ -59,7 +68,7 @@ namespace SectorGenerator
             string result; //результат генерации
             //выбор спецификации
             string sectorName = getName(sectorNames, sectorNameValues);
-            if (sectorName == "") 
+            if (sectorName == "") //если не выбрана спецификация сектора
             {
                 LBLsectorHint.Text = "Введите возможные спецификации сектора и укажите их частоту";
                 return; 
@@ -67,7 +76,7 @@ namespace SectorGenerator
             sectorInfo = "Спецификация:\n" + sectorName + "\n\n";
             //выбор типа
             string sectorType = getName(sectorTypes, sectorTypeValues);
-            if (sectorType == "") 
+            if (sectorType == "") //если не выбран тип сектора
             {
                 LBLsectorHint.Text = "Введите возможные типы сектора и укажите их частоту";
                 return; 
@@ -89,9 +98,15 @@ namespace SectorGenerator
             LBLsectorResult.Text = result;
             LBLsectorHint.Text = "Теперь перейдите во вкладку Генератор Зон \n\n Информацию о секторе можно посмотреть\n во вкладке Информация О Секторе ";
             NUDzoneCount.Value = Convert.ToInt32(Zones);
+
             LBLinfoSectorInfo.Text = sectorInfo;
 
             BTNzoneGenerate.Visible = true;
+
+            //сохраниение информации о секторе
+            selectedSector.SectorName = TBsectorMainNameChange.Text;
+            selectedSector.SectorInfo = sectorInfo;
+
         }       
         
         //поиск индекса в массиве
@@ -130,9 +145,7 @@ namespace SectorGenerator
             }
             return "";
         }
-
-
-
+                
         //генерация зоны
         private void BTNzoneResult_Click(object sender, EventArgs e)
         {
@@ -158,13 +171,14 @@ namespace SectorGenerator
                 return;
             }
             //инициализация нужных данных
-            string enemy, enemies, shablonInfo, side;
+            string enemy, enemies, shablonInfo, side, zoneName;
             int shablonNum;
             int zonesNumber = Convert.ToInt32(NUDzoneCount.Value);
             zonesInfo = new string[zonesNumber];
             CBinfoZonesInfo.Items.Clear();
             //генерация зон
             zonesShablon = new int[zonesNumber];
+            zonesNames = new string[zonesNumber];
             for (int i = 0; i < NUDzoneCount.Value; i++)
             {
                 enemy = itemsGenerator(zoneEnemyNames, zoneEnemyBeforeSpawn, zoneEnemyAfterSpawn,
@@ -181,7 +195,9 @@ namespace SectorGenerator
                     enemies += enemy;
                 //запись данных
                 zonesInfo[i] = shablonInfo + side + enemies;
-                CBinfoZonesInfo.Items.Add("Зона " + (i + 1).ToString());
+                zoneName = "Зона " + (i + 1).ToString();
+                CBinfoZonesInfo.Items.Add(zoneName);
+                zonesNames[i] = zoneName;
             }
             
 
@@ -191,6 +207,8 @@ namespace SectorGenerator
 
             BTNbuildingsGenerate.Visible = true;
 
+            selectedSector.ZonesInfo = zonesInfo;
+            selectedSector.ZonesNames = zonesNames;
         }
 
         //генератор врагов
@@ -246,6 +264,7 @@ namespace SectorGenerator
             LBLzoneCounter.Text = counter.ToString();//добавление единицы
         }
 
+        //перемешивание 
         private void BTNreshuffle_Click(object sender, EventArgs e)
         {
             //сбор данных
@@ -366,6 +385,7 @@ namespace SectorGenerator
             NUDzoneShablonSettings.Value = shablon[CBzoneShablonSettings.SelectedIndex];
         }
 
+        //изменение выбора зоны
         private void CBinfoZonesInfo_SelectedIndexChanged(object sender, EventArgs e)
         {
             //вывод информации о зоне
@@ -377,16 +397,18 @@ namespace SectorGenerator
             for (int i = 0; i < buildingsInfo[CBinfoZonesInfo.SelectedIndex].Length; i++)
             {
                 buildingInfo = buildingsInfo[CBinfoZonesInfo.SelectedIndex][i];
-                if (i % 2 == 0)
-                    LBLinfoBuildingsInfo1.Text += buildingInfo + "\n";
-                else
-                    LBLinfoBuildingsInfo2.Text += buildingInfo + "\n";
+                if (i % 2 == 0) //в первый столбец
+                    LBLinfoBuildingsInfo1.Text += buildingInfo + "\n\n";
+                else //во второй столбец
+                    LBLinfoBuildingsInfo2.Text += buildingInfo + "\n\n";
             }
 
         }
 
+        //создание зданий
         private void BTNbuildingsGenerate_Click(object sender, EventArgs e)
         {
+            //сбор данных при генерации зданий
             TextBox[] TBbuildingTypes = {TBbuildingType1, TBbuildingType2,
                 TBbuildingType3, TBbuildingType4, TBbuildingType5, TBbuildingType6,
                 TBbuildingType7, TBbuildingType8, TBbuildingType9, TBbuildingType10};
@@ -412,30 +434,35 @@ namespace SectorGenerator
                 TBloot7, TBloot8, TBloot9, TBloot10};
             string[] lootNames = TB.collectTB(TBloot);
 
-
+            //инициализация переменных
             string buildingInfo, buildingType, loot;
             int ind;
+            //подготовка массива массива зданий и массива зданий =D
             buildingsInfo = new string[zonesInfo.Length][];
             string[] buildings;
-
+            //создание зданий по шаблону
             for(int i = 0; i<zonesShablon.Length; i++)
             {
                 int buildingsCount = shablon[zonesShablon[i] - 1]; //количество зданий
-                buildings = new string[buildingsCount];
+                buildings = new string[buildingsCount]; //здания в конкретной зоне
+                //создание зданий
                 for(int j = 0; j<buildingsCount; j++)
                 {
 
-                    buildingInfo = "Здание №" + (j+1).ToString() + "\n";
-                    buildingType = getName(buildingTypes, buildingTypeValues);
+                    buildingInfo = "Здание №" + (j+1).ToString() + "\n"; //номер здания
+                    buildingType = getName(buildingTypes, buildingTypeValues); //тип здания
 
-                    ind = findIndex(buildingTypes, buildingType);
+                    ind = findIndex(buildingTypes, buildingType); 
+                    //изменение частоты зданий
                     buildingTypeValues[ind] -= buildingTypeChanges[ind];
                     if (buildingTypeValues[ind] < 1)
                         buildingTypeValues[ind] = 1;
+                    //создание лута
                     loot = "Лут:\n" + itemsGenerator(lootNames, lootBeforeSpawn, lootAfterSpawn, 
                         Convert.ToInt32(NUDlootStartChance.Value), CBlootCycled.Checked, 
                         CBlootInterrupt.Checked);
 
+                    //сохраниение сгенерированных переменных
                     buildingInfo += buildingType + "\n\n";
                     buildingInfo += loot;
 
@@ -445,9 +472,13 @@ namespace SectorGenerator
                 buildingsInfo[i] = buildings;
             }
 
+            selectedSector.BuildingsInfo = buildingsInfo;
+
+            //обновление поздсказки
             LBLbuildingHint.Text = "Если вы следовали подсказкам,\nто теперь вы сможете посмотреть\nинформацию о секторе в следующей вкладке.";
         }
 
+        //кнопка перемешивания лута
         private void BTNlootResuffle_Click(object sender, EventArgs e)
         {
             //сбор данных
@@ -483,6 +514,76 @@ namespace SectorGenerator
 
 
             }
+        }
+        
+        //изменение названия текущего сектора
+        private void BTNsectorMainNameChange_Click(object sender, EventArgs e)
+        {
+            string name = TBsectorMainNameChange.Text;
+            LBLsectorMainName.Text = name;
+            selectedSector.SectorName = name;
+            CBinfoSectorChoose.Items.Clear();
+            foreach(Sector sec in sectorsInfo)
+            {
+                CBinfoSectorChoose.Items.Add(sec.SectorName);
+            }
+            CBinfoSectorChoose.Text = selectedSector.SectorName;
+        }
+
+        //создать новый сектор
+        private void BTNcreateNewSector_Click(object sender, EventArgs e)
+        {
+            selectedSector = new Sector("Сектор №" + (++sectorCounter).ToString()); //создание объекта
+            sectorsInfo.Add(selectedSector); //добавление объекта в список
+            //изменение выбора сектора
+            CBinfoSectorChoose.Items.Add(selectedSector.SectorName); 
+            CBinfoSectorChoose.Text = selectedSector.SectorName;
+
+            TBsectorMainNameChange.Text = selectedSector.SectorName; //изменение в TextBox'е
+
+            //удаление зон
+            CBinfoZonesInfo.Items.Clear();
+            CBinfoZonesInfo.Text = "";
+
+            //обновление надписей
+            LBLsectorMainName.Text = selectedSector.SectorName; //изменение имени сектора
+            LBLinfoSectorInfo.Text = "Отсутствует";
+            LBLinfoZoneInfo.Text = "Отсутствует";
+            LBLinfoBuildingsInfo1.Text = "Отсутствует";
+            LBLinfoBuildingsInfo2.Text = "";
+            
+        }
+
+        //выбор сектора из созданных
+        private void CBinfoSectorChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {       
+            //обновнение данных о текущей зоне
+            selectedSector = sectorsInfo[CBinfoSectorChoose.SelectedIndex]; //выбор нужной зоны из списка
+            //считывание данных из сектора
+            zonesShablon = selectedSector.ZonesShablon;
+            zonesNames = selectedSector.ZonesNames;
+            zonesInfo = selectedSector.ZonesInfo;
+            buildingsInfo = selectedSector.BuildingsInfo;
+
+            CBinfoZonesInfo.Text = "";
+            LBLinfoSectorInfo.Text = selectedSector.SectorInfo; //изменение информации о секторе
+
+            //изменение выбора зон
+            CBinfoZonesInfo.Items.Clear();
+            foreach(string zone in selectedSector.ZonesNames)
+            {
+                CBinfoZonesInfo.Items.Add(zone);
+            }
+
+            TBsectorMainNameChange.Text = selectedSector.SectorName; //изменение в TextBox'е
+
+            //изменение надписей
+            LBLinfoSectorInfo.Text = selectedSector.SectorInfo; //изменение информации о секторе
+            LBLinfoBuildingsInfo1.Text = "Отсутствует";
+            LBLinfoBuildingsInfo2.Text = "";
+            LBLinfoZoneInfo.Text = "Отсутствует";
+            LBLsectorMainName.Text = selectedSector.SectorName;
+
         }
     }
 }
