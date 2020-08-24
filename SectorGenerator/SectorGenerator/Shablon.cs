@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace SectorGenerator
 {
-    class Sector : Obj
+    class Shablon
     {
-        public Sector(string name)
+        public Shablon(string name, int buildings)
         {
             Name = name;
+            Buildings = buildings;
         }
-
-        public Zone[] Zones = new Zone[0] {};
-
-        public string Spec { get; set; } = "";
-
-        public int Level { get; set; } = 1;
+        public string Name { get; set; } = "";
+        public int Buildings { get; set; } = 5;
     }
 }
